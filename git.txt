@@ -1,0 +1,51 @@
+git ：  分布式版本管理工具  ， 一台电脑 既可以是客户端  也可以是服务器端   ， 工作过程中  可以断开网络
+
+git使用：
+
+1、创建一个项目目录
+
+2、 通过命令 git init 把这个目录变成git可以管理的仓库
+git status  查看当前被git管理的文件
+
+3、使用命令 git add readme.txt添加到暂存区  命令  ---   git  add  文件全称
+   将全部文件添加到git项目中 ：  git  add .    或   git  add --all
+
+
+
+
+4、用命令 git commit告诉Git，把文件提交到仓库
+  git  commit  -m "日志"   日志必填
+
+5、添加好的文件 或 项目  如果被修改  ，先  做add操作  ，再 commit  操作
+6、git log   查看日志信息
+
+7、回退到某个版本 :   git  reset --hard "日志列表前六位值"
+
+
+分支操作
+查看分支 ： git branch
+创建分支:    git branch 分支名称      
+切换分支 ： git checkout 分支名称
+创建并切换到某个分支 (合并上面两个操作)： git checkout -b 分支名称
+在master上合并分支 ： git merge 分支名 (切换到master分支上)
+git branch -d new2  删除master下的分支
+
+链接远程仓库
+git remote add origin https://github.com/jinlei1234/demo1816.git
+
+
+将暂存区的文件提交的远程仓库的master分支上
+git push -u origin master
+
+例如 ： git remote add origin https://github.com/jinlei1234/demo16.git
+ git push -u origin master
+
+
+
+ 
+线下 克隆 github项目      git clone  地址
+线下修改项目   ， 将修改后的项目 推送到github上  先add  在commit 在    git push -u origin master
+如果在线上修改项目  ，同步到线下 ，可以重新克隆  ，也可以 在该目录下  git pull  origin master
+
+
+https://www.cnblogs.com/liuleilei/p/6533177.html
